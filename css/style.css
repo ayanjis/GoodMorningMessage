@@ -92,7 +92,7 @@ p {
 
 .madeby {
   position: absolute;
-  top: 90vh;
+  top: 85vh;
 }
 
 .madeby p::after {
