@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html,body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: black;
+
+  font-family: 'Poppins', sans-serif;
+
+  color: white;
+  margin: 0;
+  user-select: none;
+}
+
+.container {
+  background: transparent;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 0.6rem;
+  font-weight: 500;
+  margin: 1rem 0;
+} 
+
+.list-item {
+  position: relative;
+  left: 0;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  z-index: 10;
+  
+  transition: 0.4s;
+}
+
+.list-item:hover {
+  transform: scale(1.1);
+  left: 10px;
+  color: black;
+}
+
+.list-item::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  height: 2.25rem;
+  width: 0.2rem;
+  background: rgb(121, 255, 71);
+
+  transition: 0.4s;
+}
+
+.list-item:hover::before {
+  width: 100%;
+  background: rgb(121, 255, 71);
+  box-shadow: 0 0 40px 10px rgba(121, 255, 71, 0.5);
+  left: 5px;
+}
+
+.item-1::before {
+  background: transparent;
+}
+
+.item-1:hover::before {
+  background: rgb(250, 68, 84);
+  box-shadow: 0 0 40px 10px rgba(250, 68, 84, 0.7);
+}
+
+
+p {
+  margin: 0.8rem 1rem;
+  width: 5rem;
+  text-align: center;
+  z-index: 1;
+}
+
+.madeby p {
+  font-size: 0.6rem;
+}
+
+.madeby {
+  position: absolute;
+  top: 90vh;
+}
+
+.madeby p::after {
+  content: "Ayan";
+  
+  color: rgba(121,255,71,0.757);
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.madeby p:hover::after {
+  text-shadow: 1px 1px 2px rgba(121,255,71,0.757), 0 0 25px rgba(121,255,71,0.757), 0 0 5px rgba(121,255,71,0.757);
+}
